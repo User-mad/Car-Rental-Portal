@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10A9EDDA-81BF-472A-BC93-302E45F585DC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rental_01</RootNamespace>
+    <AssemblyName>Rental_01</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Resources.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.html" />
+    <Content Include="about-us.html" />
+    <Content Include="Aboutus.aspx" />
+    <Content Include="accordions.html" />
+    <Content Include="adminlogin\adminlogin.aspx" />
+    <Content Include="adminlogin\css\main.css" />
+    <Content Include="adminlogin\css\util.css" />
+    <Content Include="adminlogin\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="adminlogin\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="adminlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="adminlogin\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="adminlogin\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="adminlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="adminlogin\fonts\montserrat\OFL.txt" />
+    <Content Include="adminlogin\fonts\raleway\OFL.txt" />
+    <Content Include="adminlogin\fonts\ubuntu\UFL.txt" />
+    <Content Include="adminlogin\images\icons\favicon.ico" />
+    <Content Include="adminlogin\images\icons\icon-google.png" />
+    <Content Include="adminlogin\images\icons\map-marker.png" />
+    <Content Include="adminlogin\images\icons\symbol-01.png" />
+    <Content Include="adminlogin\index.html" />
+    <Content Include="adminlogin\js\main.js" />
+    <Content Include="adminlogin\vendor\animate\animate.css" />
+    <Content Include="adminlogin\vendor\animsition\css\animsition.css" />
+    <Content Include="adminlogin\vendor\animsition\css\animsition.min.css" />
+    <Content Include="adminlogin\vendor\animsition\js\animsition.js" />
+    <Content Include="adminlogin\vendor\animsition\js\animsition.min.js" />
+    <Content Include="adminlogin\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="adminlogin\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="adminlogin\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="adminlogin\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="adminlogin\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="adminlogin\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="adminlogin\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="adminlogin\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="adminlogin\vendor\bootstrap\js\popper.js" />
+    <Content Include="adminlogin\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="adminlogin\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="adminlogin\vendor\countdowntime\countdowntime.js" />
+    <Content Include="adminlogin\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="adminlogin\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="adminlogin\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="adminlogin\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="adminlogin\vendor\daterangepicker\moment.js" />
+    <Content Include="adminlogin\vendor\daterangepicker\moment.min.js" />
+    <Content Include="adminlogin\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="adminlogin\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="adminlogin\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="adminlogin\vendor\select2\select2.css" />
+    <Content Include="adminlogin\vendor\select2\select2.js" />
+    <Content Include="adminlogin\vendor\select2\select2.min.css" />
+    <Content Include="adminlogin\vendor\select2\select2.min.js" />
+    <Content Include="Admin\AdminEditService.aspx" />
+    <Content Include="Admin\Adminmangecity.aspx" />
+    <Content Include="Admin\AdminViewService.aspx" />
+    <Content Include="Admin\adminhome.aspx" />
+    <Content Include="Admin\Adminmangeservice.aspx" />
+    <Content Include="Admin\adminservices.aspx" />
+    <Content Include="Admin\assets\css\basic.css" />
+    <Content Include="Admin\assets\css\bootstrap-fileupload.min.css" />
+    <Content Include="Admin\assets\css\bootstrap-social.css" />
+    <Content Include="Admin\assets\css\bootstrap.css" />
+    <Content Include="Admin\assets\css\custom.css" />
+    <Content Include="Admin\assets\css\error.css" />
+    <Content Include="Admin\assets\css\font-awesome.css" />
+    <Content Include="Admin\assets\css\invoice.css" />
+    <Content Include="Admin\assets\css\prettyPhoto.css" />
+    <Content Include="Admin\assets\css\pricing.css" />
+    <Content Include="Admin\assets\css\wizard\jquery.steps.css" />
+    <Content Include="Admin\assets\css\wizard\normalize.css" />
+    <Content Include="Admin\assets\css\wizard\wizardMain.css" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\assets\img\user1.jpg" />
+    <Content Include="Admin\assets\img\demoUpload.jpg" />
+    <Content Include="Admin\assets\img\logo-invoice.png" />
+    <Content Include="Admin\assets\img\portfolio\b.jpg" />
+    <Content Include="Admin\assets\img\portfolio\c.png" />
+    <Content Include="Admin\assets\img\portfolio\d.jpg" />
+    <Content Include="Admin\assets\img\portfolio\e.jpg" />
+    <Content Include="Admin\assets\img\portfolio\g.jpg" />
+    <Content Include="Admin\assets\img\portfolio\h.jpg" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\default\loader.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\default\sprite.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Admin\assets\img\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Admin\assets\img\slideshow\1.jpg" />
+    <Content Include="Admin\assets\img\slideshow\2.jpg" />
+    <Content Include="Admin\assets\img\slideshow\3.jpg" />
+    <Content Include="Admin\assets\img\user.gif" />
+    <Content Include="Admin\assets\img\user.png" />
+    <Content Include="Admin\assets\js\bootstrap-fileupload.js" />
+    <Content Include="Admin\assets\js\bootstrap.js" />
+    <Content Include="Admin\assets\js\custom.js" />
+    <Content Include="Admin\assets\js\galleryCustom.js" />
+    <Content Include="Admin\assets\js\jquery-1.10.2.js" />
+    <Content Include="Admin\assets\js\jquery.metisMenu.js" />
+    <Content Include="Admin\assets\js\jquery.mixitup.min.js" />
+    <Content Include="Admin\assets\js\jquery.prettyPhoto.js" />
+    <Content Include="Admin\assets\js\wizard\jquery.cookie-1.3.1.js" />
+    <Content Include="Admin\assets\js\wizard\jquery.steps.js" />
+    <Content Include="Admin\assets\js\wizard\modernizr-2.6.2.min.js" />
+    <Content Include="Admin\blank.html" />
+    <Content Include="Admin\buttons.html" />
+    <Content Include="Admin\categoryadmin.aspx" />
+    <Content Include="Admin\categoryimage\suv.jpg" />
+    <Content Include="Admin\component.html" />
+    <Content Include="Admin\error.html" />
+    <Content Include="Admin\form-advance.html" />
+    <Content Include="Admin\form.html" />
+    <Content Include="Admin\gallery.html" />
+    <Content Include="Admin\grid.html" />
+    <Content Include="Admin\icons.html" />
+    <Content Include="Admin\index.html" />
+    <Content Include="Admin\invoice.html" />
+    <Content Include="Admin\login.html" />
+    <Content Include="Admin\message-task.html" />
+    <Content Include="Admin\notification.html" />
+    <Content Include="Admin\panel-tabs.html" />
+    <Content Include="Admin\pricing.html" />
+    <Content Include="Admin\progress.html" />
+    <Content Include="Admin\serviceimage\serviceimage.jpg" />
+    <Content Include="Admin\social.html" />
+    <Content Include="Admin\table.html" />
+    <Content Include="Admin\typography.html" />
+    <Content Include="Admin\viewusers.aspx" />
+    <Content Include="Admin\wizard.html" />
+    <Content Include="alert.html" />
+    <Content Include="App_Data\db1.mdf" />
+    <Content Include="App_Data\db1_log.ldf">
+      <DependentUpon>db1.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Rental.mdf" />
+    <Content Include="App_Data\Rental_log.ldf">
+      <DependentUpon>Rental.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\css\animate.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\flaticon.css" />
+    <Content Include="assets\css\fontawesome.min.css" />
+    <Content Include="assets\css\images\ui-bg_diagonals-thick_18_b81900_40x40.html" />
+    <Content Include="assets\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="assets\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="assets\css\images\ui-bg_glass_100_f6f6f6_1x400.html" />
+    <Content Include="assets\css\images\ui-bg_glass_100_fdf5ce_1x400.html" />
+    <Content Include="assets\css\images\ui-bg_glass_65_ffffff_1x400.html" />
+    <Content Include="assets\css\images\ui-bg_gloss-wave_35_f6a828_500x100.html" />
+    <Content Include="assets\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.html" />
+    <Content Include="assets\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.html" />
+    <Content Include="assets\css\images\ui-icons_222222_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_228ef1_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="assets\css\images\ui-icons_ffd27a_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\css\jquery-ui.min.css" />
+    <Content Include="assets\css\jquery.rprogessbar.min.css" />
+    <Content Include="assets\css\meanmenu.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\rpopup.min.css" />
+    <Content Include="assets\css\slick.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\themify-icons.css" />
+    <Content Include="assets\fonts\fa-brands-400.html" />
+    <Content Include="assets\fonts\fa-brands-400.svg" />
+    <Content Include="assets\fonts\fa-regular-400.html" />
+    <Content Include="assets\fonts\fa-regular-400.svg" />
+    <Content Include="assets\fonts\fa-solid-900.html" />
+    <Content Include="assets\fonts\fa-solid-900.svg" />
+    <Content Include="assets\fonts\Flaticon.html" />
+    <Content Include="assets\fonts\Flaticon.svg" />
+    <Content Include="assets\fonts\gilroy-bold-webfont.html" />
+    <Content Include="assets\fonts\gilroy-medium-webfont.html" />
+    <Content Include="assets\fonts\gilroy-regular-webfont.html" />
+    <Content Include="assets\fonts\themify9f24.svg" />
+    <Content Include="assets\img\404\01.png" />
+    <Content Include="assets\img\about-us\01.png" />
+    <Content Include="assets\img\back-to-top.png" />
+    <Content Include="assets\img\bg\bg-01.png" />
+    <Content Include="assets\img\bg\bg-02.png" />
+    <Content Include="assets\img\bg\bg-03.png" />
+    <Content Include="assets\img\bg\footer-bg.png" />
+    <Content Include="assets\img\bg\h5-testimonial-bg.png" />
+    <Content Include="assets\img\bg\our-process-bg.png" />
+    <Content Include="assets\img\bg\title-bg.png" />
+    <Content Include="assets\img\blog\01.png" />
+    <Content Include="assets\img\blog\02.png" />
+    <Content Include="assets\img\blog\03.png" />
+    <Content Include="assets\img\blog\04.png" />
+    <Content Include="assets\img\blog\blog-details\01.png" />
+    <Content Include="assets\img\blog\blog-details\02.png" />
+    <Content Include="assets\img\blog\blog-details\avatar-01.png" />
+    <Content Include="assets\img\blog\blog-details\avatar-02.png" />
+    <Content Include="assets\img\blog\blog-details\avatar-03.png" />
+    <Content Include="assets\img\blog\blog-details\related-post\01.png" />
+    <Content Include="assets\img\blog\blog-details\related-post\02.png" />
+    <Content Include="assets\img\blog\blog-details\related-post\03.png" />
+    <Content Include="assets\img\blog\blog-details\related-post\04.png" />
+    <Content Include="assets\img\blog\gallery\01.png" />
+    <Content Include="assets\img\blog\gallery\02.png" />
+    <Content Include="assets\img\blog\gallery\03.png" />
+    <Content Include="assets\img\blog\gallery\04.png" />
+    <Content Include="assets\img\blog\gallery\05.png" />
+    <Content Include="assets\img\blog\gallery\06.png" />
+    <Content Include="assets\img\blog\recent-post\01.png" />
+    <Content Include="assets\img\blog\recent-post\02.png" />
+    <Content Include="assets\img\blog\recent-post\03.png" />
+    <Content Include="assets\img\blog\recent-post\04.png" />
+    <Content Include="assets\img\breadcrumb\01.png" />
+    <Content Include="assets\img\breadcrumb\02.png" />
+    <Content Include="assets\img\breadcrumb\03.png" />
+    <Content Include="assets\img\breadcrumb\04.png" />
+    <Content Include="assets\img\breadcrumb\05.png" />
+    <Content Include="assets\img\breadcrumb\06.png" />
+    <Content Include="assets\img\breadcrumb\07.png" />
+    <Content Include="assets\img\breadcrumb\08.png" />
+    <Content Include="assets\img\breadcrumb\09.png" />
+    <Content Include="assets\img\breadcrumb\10.png" />
+    <Content Include="assets\img\car-booking\01.png" />
+    <Content Include="assets\img\car-booking\02.png" />
+    <Content Include="assets\img\car-booking\03.png" />
+    <Content Include="assets\img\car-sell\01.png" />
+    <Content Include="assets\img\cart\01.png" />
+    <Content Include="assets\img\cart\02.png" />
+    <Content Include="assets\img\cart\03.png" />
+    <Content Include="assets\img\cart\cart-01.png" />
+    <Content Include="assets\img\coming-soon\01.png" />
+    <Content Include="assets\img\contact\01.png" />
+    <Content Include="assets\img\home-01\01.png" />
+    <Content Include="assets\img\home-01\02.png" />
+    <Content Include="assets\img\home-01\03.png" />
+    <Content Include="assets\img\home-01\our-service\01.jpg" />
+    <Content Include="assets\img\home-01\our-service\02.jpg" />
+    <Content Include="assets\img\home-01\our-service\03.jpg" />
+    <Content Include="assets\img\home-01\our-service\04.jpg" />
+    <Content Include="assets\img\home-01\our-service\05.jpg" />
+    <Content Include="assets\img\home-02\01.png" />
+    <Content Include="assets\img\home-02\02.png" />
+    <Content Include="assets\img\home-02\car-top.png" />
+    <Content Include="assets\img\home-02\slider-01.png" />
+    <Content Include="assets\img\home-02\slider-02.png" />
+    <Content Include="assets\img\home-02\slider-03.png" />
+    <Content Include="assets\img\home-02\slider-04.png" />
+    <Content Include="assets\img\home-02\team-1.png" />
+    <Content Include="assets\img\home-02\team-2.png" />
+    <Content Include="assets\img\home-02\team-3.png" />
+    <Content Include="assets\img\home-02\team-4.png" />
+    <Content Include="assets\img\home-05\01.png" />
+    <Content Include="assets\img\home-05\02.png" />
+    <Content Include="assets\img\home-05\avatar-01.png" />
+    <Content Include="assets\img\home-05\avatar-02.png" />
+    <Content Include="assets\img\home-05\avatar-03.png" />
+    <Content Include="assets\img\home-05\blog-img-01.png" />
+    <Content Include="assets\img\home-05\blog-img-02.png" />
+    <Content Include="assets\img\home-05\blog-img-03.png" />
+    <Content Include="assets\img\home-05\blog-img-04.png" />
+    <Content Include="assets\img\home-05\filter-img-05.png" />
+    <Content Include="assets\img\home-05\filter-img-06.png" />
+    <Content Include="assets\img\home-05\filter-img-07.png" />
+    <Content Include="assets\img\home-05\filter-img-08.png" />
+    <Content Include="assets\img\home-05\slider-bg.png" />
+    <Content Include="assets\img\home-05\tab-slider-01.png" />
+    <Content Include="assets\img\home-05\tab-slider-02.png" />
+    <Content Include="assets\img\home-05\tab-slider-03.png" />
+    <Content Include="assets\img\home-05\tab-slider-04.png" />
+    <Content Include="assets\img\home-05\tab-slider-big-01.png" />
+    <Content Include="assets\img\home-05\tab-slider-big-02.png" />
+    <Content Include="assets\img\home-05\tab-slider-big-03.png" />
+    <Content Include="assets\img\home-05\tab-slider-big-04.png" />
+    <Content Include="assets\img\icons\03.png" />
+    <Content Include="assets\img\icons\04.png" />
+    <Content Include="assets\img\icons\05.png" />
+    <Content Include="assets\img\icons\h5-icon-01.png" />
+    <Content Include="assets\img\icons\h5-icon-02.png" />
+    <Content Include="assets\img\icons\h5-icon-03.png" />
+    <Content Include="assets\img\icons\h5-icon-04.png" />
+    <Content Include="assets\img\icons\h5-icon-05.png" />
+    <Content Include="assets\img\icons\h5-icon-06.png" />
+    <Content Include="assets\img\icons\h5-icon-07.png" />
+    <Content Include="assets\img\latest-news\01.png" />
+    <Content Include="assets\img\latest-news\02.png" />
+    <Content Include="assets\img\latest-news\03.png" />
+    <Content Include="assets\img\latest-news\04.png" />
+    <Content Include="assets\img\logo-02.png" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\marker.png" />
+    <Content Include="assets\img\modal\01.png" />
+    <Content Include="assets\img\modal\02.png" />
+    <Content Include="assets\img\service\01.png" />
+    <Content Include="assets\img\service\02.png" />
+    <Content Include="assets\img\service\03.png" />
+    <Content Include="assets\img\service\04.png" />
+    <Content Include="assets\img\service\05.png" />
+    <Content Include="assets\img\service\06.png" />
+    <Content Include="assets\img\service\details-01.png" />
+    <Content Include="assets\img\service\details-02.png" />
+    <Content Include="assets\img\service\details-03.png" />
+    <Content Include="assets\img\service\details-04.png" />
+    <Content Include="assets\img\shop-02\product-01.png" />
+    <Content Include="assets\img\shop-02\product-02.png" />
+    <Content Include="assets\img\shop-02\product-03.png" />
+    <Content Include="assets\img\shop-02\product-04.png" />
+    <Content Include="assets\img\shop-details-02\01.png" />
+    <Content Include="assets\img\shop-details-02\02.png" />
+    <Content Include="assets\img\shop-details-02\03.png" />
+    <Content Include="assets\img\shop-details-02\04.png" />
+    <Content Include="assets\img\shop-details-02\related-01.png" />
+    <Content Include="assets\img\shop-details-02\related-02.png" />
+    <Content Include="assets\img\shop-details-02\related-03.png" />
+    <Content Include="assets\img\shop-details-02\related-04.png" />
+    <Content Include="assets\img\shop-details-02\small-01.png" />
+    <Content Include="assets\img\shop-details-02\small-02.png" />
+    <Content Include="assets\img\shop-details-02\small-03.png" />
+    <Content Include="assets\img\shop-details-02\small-04.png" />
+    <Content Include="assets\img\shop-details\big-01.png" />
+    <Content Include="assets\img\shop-details\big-02.png" />
+    <Content Include="assets\img\shop-details\big-03.png" />
+    <Content Include="assets\img\shop-details\big-04.png" />
+    <Content Include="assets\img\shop-details\small-01.png" />
+    <Content Include="assets\img\shop-details\small-02.png" />
+    <Content Include="assets\img\shop-details\small-03.png" />
+    <Content Include="assets\img\shop-details\small-04.png" />
+    <Content Include="assets\img\shop\new-product\01.png" />
+    <Content Include="assets\img\shop\new-product\02.png" />
+    <Content Include="assets\img\shop\new-product\03.png" />
+    <Content Include="assets\img\shop\new-product\04.png" />
+    <Content Include="assets\img\shop\product\01.png" />
+    <Content Include="assets\img\shop\product\02.png" />
+    <Content Include="assets\img\shop\product\03.png" />
+    <Content Include="assets\img\sign-in\01.png" />
+    <Content Include="assets\img\slider\h1-slider-01.png" />
+    <Content Include="assets\img\slider\h1-slider-02.png" />
+    <Content Include="assets\img\slider\h1-slider-03.png" />
+    <Content Include="assets\img\slider\h1-slider-04.png" />
+    <Content Include="assets\img\slider\h2-slider-01.png" />
+    <Content Include="assets\img\slider\h2-slider-02.png" />
+    <Content Include="assets\img\slider\h2-slider-03.png" />
+    <Content Include="assets\img\slider\h3-slider-01.png" />
+    <Content Include="assets\img\slider\h3-slider-02.png" />
+    <Content Include="assets\img\slider\h3-slider-03.png" />
+    <Content Include="assets\img\slider\h3-slider-04.png" />
+    <Content Include="assets\img\slider\h4-slider-01.png" />
+    <Content Include="assets\img\slider\h4-slider-02.png" />
+    <Content Include="assets\img\slider\h4-slider-03.png" />
+    <Content Include="assets\img\slider\h4-slider-04.png" />
+    <Content Include="assets\img\slider\h5-slider-01.png" />
+    <Content Include="assets\img\testimonial\01.png" />
+    <Content Include="assets\img\testimonial\02.png" />
+    <Content Include="assets\img\testimonial\03.png" />
+    <Content Include="assets\img\testimonial\04.png" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\countdown.js" />
+    <Content Include="assets\js\custom-input-number.js" />
+    <Content Include="assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\jquery-3.4.1.min.js" />
+    <Content Include="assets\js\jquery-migrate.min.js" />
+    <Content Include="assets\js\jquery-ui.js" />
+    <Content Include="assets\js\jquery.meanmenu.min.js" />
+    <Content Include="assets\js\jquery.nice-select.min.js" />
+    <Content Include="assets\js\jQuery.rcounter.js" />
+    <Content Include="assets\js\jquery.rPopup.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\mixitup.min.js" />
+    <Content Include="assets\js\slick.min.js" />
+    <Content Include="assets\js\waypoints.min.js" />
+    <Content Include="assets\js\wow.min.js" />
+    <Content Include="blog-details.html" />
+    <Content Include="blog.html" />
+    <Content Include="buttons.html" />
+    <Content Include="cancel_booking.aspx" />
+    <Content Include="car-booking.html" />
+    <Content Include="car-repair.html" />
+    <Content Include="car-sell.html" />
+    <Content Include="cart.html" />
+    <Content Include="changepassword.aspx" />
+    <Content Include="checkemailpass.aspx" />
+    <Content Include="codingeek-link.js" />
+    <Content Include="coming-soon.html" />
+    <Content Include="Comming_Soon.aspx" />
+    <Content Include="experiment\date.aspx" />
+    <Content Include="Faq.aspx" />
+    <Content Include="Feedback.aspx" />
+    <Content Include="contact.html" />
+    <Content Include="countdown.html" />
+    <Content Include="faq.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="footer.html" />
+    <Content Include="Forgot_Password.aspx" />
+    <Content Include="form.html" />
+    <Content Include="header.html" />
+    <Content Include="Home.aspx" />
+    <Content Include="homeprofileimage\rprofile.jpg" />
+    <Content Include="homeprofileimage\sprofile.jpg" />
+    <Content Include="icons.html" />
+    <Content Include="index-2.html" />
+    <Content Include="index-3.html" />
+    <Content Include="index-4.html" />
+    <Content Include="index-5.html" />
+    <Content Include="index-6.html" />
+    <Content Include="index.html" />
+    <Content Include="innerhome.aspx" />
+    <Content Include="innerprofile.aspx" />
+    <Content Include="Json\bootstrap.min.js" />
+    <Content Include="Json\bvalidator.theme.gray2.css" />
+    <Content Include="Json\contact-form-script.js" />
+    <Content Include="Json\custom.js" />
+    <Content Include="Json\form-validator.min.js" />
+    <Content Include="Json\jquery-1.6.2.min.js" />
+    <Content Include="Json\jquery.bvalidator-yc.js" />
+    <Content Include="Json\jquery.bvalidator.js" />
+    <Content Include="Json\jquery.min.js" />
+    <Content Include="Json\owl.carousel.min.js" />
+    <Content Include="Json\popper.min.js" />
+    <Content Include="Logout.aspx" />
+    <Content Include="modal.html" />
+    <Content Include="pagination.html" />
+    <Content Include="paydetails.aspx" />
+    <Content Include="Payment\css\style.css" />
+    <Content Include="Payment\images\11.png" />
+    <Content Include="Payment\images\pic1.png" />
+    <Content Include="Payment\images\pic2.png" />
+    <Content Include="Payment\images\pic3.png" />
+    <Content Include="Payment\images\pic4.png" />
+    <Content Include="Payment\images\tick-mark1.png" />
+    <Content Include="Payment\images\visa.png" />
+    <Content Include="Payment\index.html" />
+    <Content Include="Payment\js\easyResponsiveTabs.js" />
+    <Content Include="Payment\js\jquery.min.js" />
+    <Content Include="Payment\Payment.aspx" />
+    <Content Include="profileimage\profile.png" />
+    <Content Include="rentservicedetails.aspx" />
+    <Content Include="service-details.html" />
+    <Content Include="service.html" />
+    <Content Include="Services.aspx" />
+    <Content Include="shop-02.html" />
+    <Content Include="shop-details-2.html" />
+    <Content Include="shop-details.html" />
+    <Content Include="shop.aspx" />
+    <Content Include="shop.html" />
+    <Content Include="sign-in.html" />
+    <Content Include="sign-up.html" />
+    <Content Include="Sign_In.aspx" />
+    <Content Include="Sign_Up.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="table.html" />
+    <Content Include="typography.html" />
+    <Content Include="ViewDetailShop.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="your_order.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aboutus.aspx.cs">
+      <DependentUpon>Aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aboutus.aspx.designer.cs">
+      <DependentUpon>Aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminlogin\adminlogin.aspx.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminlogin\adminlogin.aspx.designer.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminEditService.aspx.cs">
+      <DependentUpon>AdminEditService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminEditService.aspx.designer.cs">
+      <DependentUpon>AdminEditService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Adminmangecity.aspx.cs">
+      <DependentUpon>Adminmangecity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Adminmangecity.aspx.designer.cs">
+      <DependentUpon>Adminmangecity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminViewService.aspx.cs">
+      <DependentUpon>AdminViewService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminViewService.aspx.designer.cs">
+      <DependentUpon>AdminViewService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminhome.aspx.cs">
+      <DependentUpon>adminhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminhome.aspx.designer.cs">
+      <DependentUpon>adminhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Adminmangeservice.aspx.cs">
+      <DependentUpon>Adminmangeservice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Adminmangeservice.aspx.designer.cs">
+      <DependentUpon>Adminmangeservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Adminmaster.Master.cs">
+      <DependentUpon>Adminmaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Adminmaster.Master.designer.cs">
+      <DependentUpon>Adminmaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminservices.aspx.cs">
+      <DependentUpon>adminservices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminservices.aspx.designer.cs">
+      <DependentUpon>adminservices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\categoryadmin.aspx.cs">
+      <DependentUpon>categoryadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\categoryadmin.aspx.designer.cs">
+      <DependentUpon>categoryadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\viewusers.aspx.cs">
+      <DependentUpon>viewusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\viewusers.aspx.designer.cs">
+      <DependentUpon>viewusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cancel_booking.aspx.cs">
+      <DependentUpon>cancel_booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cancel_booking.aspx.designer.cs">
+      <DependentUpon>cancel_booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkemailpass.aspx.cs">
+      <DependentUpon>checkemailpass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkemailpass.aspx.designer.cs">
+      <DependentUpon>checkemailpass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comming_Soon.aspx.cs">
+      <DependentUpon>Comming_Soon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comming_Soon.aspx.designer.cs">
+      <DependentUpon>Comming_Soon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="experiment\date.aspx.cs">
+      <DependentUpon>date.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="experiment\date.aspx.designer.cs">
+      <DependentUpon>date.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faq.aspx.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faq.aspx.designer.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forgot_Password.aspx.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forgot_Password.aspx.designer.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="innerhome.aspx.cs">
+      <DependentUpon>innerhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="innerhome.aspx.designer.cs">
+      <DependentUpon>innerhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Innermaster.Master.cs">
+      <DependentUpon>Innermaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Innermaster.Master.designer.cs">
+      <DependentUpon>Innermaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="innerprofile.aspx.cs">
+      <DependentUpon>innerprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="innerprofile.aspx.designer.cs">
+      <DependentUpon>innerprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mstr_home.Master.cs">
+      <DependentUpon>Mstr_home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mstr_home.Master.designer.cs">
+      <DependentUpon>Mstr_home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="paydetails.aspx.cs">
+      <DependentUpon>paydetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paydetails.aspx.designer.cs">
+      <DependentUpon>paydetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rentservicedetails.aspx.cs">
+      <DependentUpon>rentservicedetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rentservicedetails.aspx.designer.cs">
+      <DependentUpon>rentservicedetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shop.aspx.cs">
+      <DependentUpon>shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shop.aspx.designer.cs">
+      <DependentUpon>shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_In.aspx.cs">
+      <DependentUpon>Sign_In.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign_In.aspx.designer.cs">
+      <DependentUpon>Sign_In.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_Up.aspx.cs">
+      <DependentUpon>Sign_Up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign_Up.aspx.designer.cs">
+      <DependentUpon>Sign_Up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDetailShop.aspx.cs">
+      <DependentUpon>ViewDetailShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDetailShop.aspx.designer.cs">
+      <DependentUpon>ViewDetailShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your_order.aspx.cs">
+      <DependentUpon>your_order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your_order.aspx.designer.cs">
+      <DependentUpon>your_order.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="serviceimg\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mstr_home.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="adminlogin\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="adminlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <None Include="adminlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <None Include="adminlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <None Include="adminlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-Black.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-Bold.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-Italic.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-Light.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-Medium.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-Regular.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-Thin.ttf" />
+    <None Include="adminlogin\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-Black.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-Bold.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-Italic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-Light.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-LightItalic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-Medium.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-Regular.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-SemiBold.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-Thin.ttf" />
+    <None Include="adminlogin\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-Black.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-BlackItalic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-Bold.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-BoldItalic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-ExtraBold.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-ExtraBoldItalic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-ExtraLight.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-ExtraLightItalic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-Italic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-Light.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-LightItalic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-Medium.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-MediumItalic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-Regular.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-SemiBold.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-SemiBoldItalic.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-Thin.ttf" />
+    <None Include="adminlogin\fonts\raleway\Raleway-ThinItalic.ttf" />
+    <None Include="adminlogin\fonts\ubuntu\Ubuntu-Bold.ttf" />
+    <None Include="adminlogin\fonts\ubuntu\Ubuntu-BoldItalic.ttf" />
+    <None Include="adminlogin\fonts\ubuntu\Ubuntu-Italic.ttf" />
+    <None Include="adminlogin\fonts\ubuntu\Ubuntu-Light.ttf" />
+    <None Include="adminlogin\fonts\ubuntu\Ubuntu-LightItalic.ttf" />
+    <None Include="adminlogin\fonts\ubuntu\Ubuntu-Medium.ttf" />
+    <None Include="adminlogin\fonts\ubuntu\Ubuntu-MediumItalic.ttf" />
+    <None Include="adminlogin\fonts\ubuntu\Ubuntu-Regular.ttf" />
+    <None Include="adminlogin\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="adminlogin\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="adminlogin\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="adminlogin\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="adminlogin\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="adminlogin\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Admin\Adminmaster.Master" />
+    <None Include="Admin\assets\fonts\fontawesome-webfont.eot" />
+    <None Include="Admin\assets\fonts\fontawesome-webfont.ttf" />
+    <None Include="Admin\assets\fonts\fontawesome-webfont.woff" />
+    <None Include="Admin\assets\fonts\FontAwesome.otf" />
+    <None Include="Admin\assets\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Admin\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Admin\assets\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="assets\fonts\fa-brands-400.eot" />
+    <None Include="assets\fonts\fa-brands-400.ttf" />
+    <None Include="assets\fonts\fa-brands-400.woff" />
+    <None Include="assets\fonts\fa-brands-400d41d.eot" />
+    <None Include="assets\fonts\fa-regular-400.eot" />
+    <None Include="assets\fonts\fa-regular-400.ttf" />
+    <None Include="assets\fonts\fa-regular-400.woff" />
+    <None Include="assets\fonts\fa-regular-400d41d.eot" />
+    <None Include="assets\fonts\fa-solid-900.eot" />
+    <None Include="assets\fonts\fa-solid-900.ttf" />
+    <None Include="assets\fonts\fa-solid-900.woff" />
+    <None Include="assets\fonts\fa-solid-900d41d.eot" />
+    <None Include="assets\fonts\Flaticon.eot" />
+    <None Include="assets\fonts\Flaticon.ttf" />
+    <None Include="assets\fonts\Flaticon.woff" />
+    <None Include="assets\fonts\Flaticond41d.eot" />
+    <None Include="assets\fonts\gilroy-bold-webfont.woff" />
+    <None Include="assets\fonts\gilroy-medium-webfont.woff" />
+    <None Include="assets\fonts\gilroy-regular-webfont.woff" />
+    <None Include="assets\fonts\themify9f24.eot" />
+    <None Include="assets\fonts\themify9f24.ttf" />
+    <None Include="assets\fonts\themify9f24.woff" />
+    <None Include="assets\fonts\themifyd41d.eot" />
+    <Content Include="Innermaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>23148</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,249 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mstr_home.master.cs" Inherits="Rental_01.Mstr_home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coche Car Servicing</title>
+
+    <!-- favicon -->
+    <link rel=icon href=favicon.ico sizes="20x20" type="image/png">
+    <!-- flaticon -->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <!-- Fonts Awesome Icons -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!--Themefy Icons-->
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--Slick Carousel-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!--Codingeek -->
+    <link rel="stylesheet" href="../../codingeek-js/codingeek.css"> 
+
+  
+    <script type="text/javascript" src="Json/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="Json/jquery.bvalidator.js"></script>
+
+    <link href="Json/bvalidator.theme.gray2.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var optionsGray2 = { classNamePrefix: 'bvalidator_gray2_', position: { x: 'right', y: 'center' }, offset: { x: 15, y: 0 }, template: '<div class="{errMsgClass}"><div class="bvalidator_gray2_arrow"></div><div class="bvalidator_gray2_cont1">{message}</div></div>' };
+        $(document).ready(function () { $('#form1').bValidator(optionsGray2); }); 
+     </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   
+
+    
+    <!--Full Width Sider Start-->
+    <div class="full-width-slider">
+        <!--Main Header Start-->
+        <Header style="background-color:black;">
+            <div class="container">
+                <div class="row">
+                    <div class="header-bottom-area">
+                        <!--Logo Area Start-->
+                        <div class="logo-area home-05">
+                            <a href="Home.aspx">
+                                <img src="assets/img/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                        <!--// Logo Area End-->
+
+                        <!--Navbar Area Start Here-->
+                        <nav class="navbar navbar-area navbar-expand-lg style-05">
+                            <div class="container nav-container">
+                               
+                                <div class="collapse navbar-collapse" id="autoshop_main_menu">
+                                    <ul class="navbar-nav">
+                                        <li >
+                                            <a href="Home.aspx">Home</a>
+                                        </li>
+                                         <li><a href="Services.aspx">Services</a></li>
+                                        
+                                        <li><a href="Feedback.aspx">Feedback</a></li>
+
+                                        <li><a href="Aboutus.aspx">About Us</a></li>
+
+                                        <li><a href="Faq.aspx">FAQ</a></li>
+
+                                        <li><a href="Comming_Soon.aspx">Comming Soon</a></li>
+                                    </ul>
+                                </div>
+                                <!--Nav Right Content-->
+                                <div class="nav-right-content">
+                                    <div class="d-flex">
+                                        <div class="contact-number">
+                                            
+                                        </div>
+                                        <div class="main-btn-wrap">
+                                            <a href="Sign_In.aspx" class="main-btn small">Sign In</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// Nav Right Content-->
+                            </div>
+                        </nav>
+                        <!-- navbar area end -->
+                        </Header>
+                    </div>
+                    <!--// header Bottom-->
+                </div>
+            </div>
+        
+        <!--// Main Header End Here-->
+
+       
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    
+
+
+    <!-- footer area start -->
+    <footer class="footer-area" style="background-image: url('assets/img/bg/footer-bg.png')">
+        <div class="footer-top ">
+            <div class="container">
+                <div class="row padding-top-100 padding-bottom-65">
+                    <div class="col-lg-4 col-md-6 px-lg-0">
+                        <div class="footer-widget widget">
+                            <div class="about_us_widget padding-top-120">
+                                <a href="Home.aspx" class="footer-logo"> <img src="assets/img/logo.png"
+                                        alt="footer logo"></a>
+                                <p>Welcome to Coche - India's rental portal. It has always striven to serve customers in the most comprehensive and convenient way possible.</p>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 offset-lg-1 col-md-6 px-lg-0">
+                        <div class="footer-widget widget widget_nav_menu">
+
+                            <div class="widget-top padding-bottom-45">
+                                <div class="contact-info-name padding-bottom-10">
+                                    Support:
+                                </div>
+                                <div class="contact-info">
+                                    <span class="d-block">+91 9876543210</span>
+                                    <span class="d-block">+91 9876543210</span>
+                                </div>
+                            </div>
+
+                            <h5 class="widget-title">Company</h5>
+                            <ul>
+                                <li><a href="Home.aspx">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="Feedback.aspx">Contact</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 px-lg-0">
+                        <div class="footer-widget widget widget_nav_menu">
+
+                            <div class="widget-top padding-bottom-45">
+                                <div class="contact-info-name padding-bottom-10"> Email: </div>
+                                <div class="contact-info">
+                                    <span class="d-block"> rutu1803@gmail.com</span>
+                                    <span class="d-block"> sm269189@gmail.com</span>
+                                </div>
+                            </div>
+
+                            <h5 class="widget-title">Services</h5>
+                            <ul>
+                                <li><a href="#">Rent A Car </a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 px-lg-0">
+                        <div class="footer-widget widget">
+
+                            <div class="widget-top padding-bottom-45">
+                                <div class="contact-info-name padding-bottom-10"> Showroom: </div>
+                                <div class="contact-info">
+                                    Old National Highway Number 8, Happy Nagar <br> Ankleshwar, Gujarat 393002
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-area-inner">
+                            &copy;All rights reserved. Powered with <span class="coypright-icon"><i
+                                    class="fas fa-heart"></i></span> by our Duo.
+                            <a href="https://codingeek.net/" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"> <img src="assets/img/back-to-top.png" alt="img"> </span>
+    </div>
+    <!-- back to top area end -->
+
+
+
+    <!-- jquery -->
+<script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+    <!--migrate-->
+    <script type="text/javascript" src="assets/js/jquery-migrate.min.js"></script>
+    <!-- bootstrap -->
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <!--Jwuery UI-->
+    <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+    <!-- waypoint -->
+    <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+    <!-- wow -->
+    <script type="text/javascript" src="assets/js/wow.min.js"></script>
+    <!--Slick Js-->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <!-- counterup -->
+    <script type="text/javascript" src="assets/js/jQuery.rcounter.js"></script>
+    <!--Nice Select-->
+    <script type="text/javascript" src="assets/js/jquery.nice-select.min.js"></script>
+    <!--Misitup-->
+    <script type="text/javascript" src="assets/js/mixitup.min.js"></script>
+    <!-- imageloaded -->
+    <script type="text/javascript" src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- main js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- codingeek -->
+    <script type="text/javascript" src="codingeek-link.js"></script>
+    <script type="text/javascript" src="../../codingeek-js/codingeek.js"></script>
+
+    <script type="text/javascript" src="Json/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="Json/jquery.bvalidator.js"></script>
+    
+
+</body>
+</html>
